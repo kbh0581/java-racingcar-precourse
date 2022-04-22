@@ -39,8 +39,8 @@
    ```
 ## 기능 목록
 
-- [ ] 자동차 전진 혹은 멈추는 기능 
-    * Random 값은 0 ~ 9 사이
+- [X] 자동차 전진 혹은 멈추는 기능 
+    * Random 값은 0 ~ 9 사이 해당값이 아닐 경우 IllegalArgumentException 발생  
     * 전진 : Random 값의 4이상일 경우 전진
     * 멈춤 : Random 값이 3이하일 경우 멈춤 
   
