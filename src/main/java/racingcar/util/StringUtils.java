@@ -1,9 +1,9 @@
 package racingcar.util;
 
 public class StringUtils {
-    public static boolean isNumber(String s) {
+    public static boolean isNumber(String numberString) {
         try {
-            Integer.parseInt(s);
+            Integer.parseInt(numberString);
         } catch (NumberFormatException e) {
             return false;
         }

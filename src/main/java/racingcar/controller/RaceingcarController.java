@@ -15,6 +15,7 @@ public class RaceingcarController {
         this.outPutView = outPutView;
     }
 
+    /** 레이싱 게임 시작 */
     public void start() {
         CarList carList = inputCarNames();
         tryRace(carList);
