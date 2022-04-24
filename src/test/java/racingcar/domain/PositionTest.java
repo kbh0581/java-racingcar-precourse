@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,5 +22,11 @@ class PositionTest {
     @DisplayName("포지션 갯수만큼 -로 치환된다")
     void getString() {
         assertThat(new Position(3).toString()).isEqualTo("---");
+    }
+
+    @Test
+    @DisplayName("포지션의 값은 음수가 될 수 없다.")
+    void minusPosition() {
+        assertThatIllegalArgumentException().isThrownBy(() -> new Position(-1));
     }
 }

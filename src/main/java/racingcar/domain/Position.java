@@ -8,6 +8,13 @@ public class Position {
 
     public Position(int position) {
         this.position = position;
+        valid();
+    }
+
+    private void valid() {
+        if (position < 0) {
+            throw new IllegalArgumentException("위치의 값은 음수가 될 수 없습니다.");
+        }
     }
 
     public void add() {
