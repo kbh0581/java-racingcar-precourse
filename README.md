@@ -69,7 +69,32 @@
 - [X] 사용자가 입력값을 잘 못 입력 시 재 입력 하는 기능 
   - IllegalArgumentException 발생
   - [ERROR]로 시작하는 에러 메시지를 출력 하고 재 입력처리
-  
-  
+
+## 구현 클래스 
+- RaceingcarController
+  - 레이싱 게임 컨트롤러 
+- domain 
+  - Car : 자동차 클래스
+    - 자동차의 전진 멈춤 담당
+  - CarList : 자동차들의 일급 컬랙션 
+    - 승자 탐색
+    - 자동차들의 레이스
+  - CarName
+    - 자동차의 이름 원시값 포장 클래스
+    - 자동차이름의 벨리데이션 담당
+  - MoveStatus
+    - 전진, 멈춤에 대한 상태 
+  - Position
+    - 자동차의 위치에 대한 일급 컬랙션
+- util
+  - MessageUtils
+    - 메시지에 대한 Util 클래스
+  - StringUtils
+    - 스트링 넘버에 대한 검증을 위한 StringUtil 클래스
+- view 
+  - InputView 
+    - 데이터 입력에 대한 화면 담당 
+  - OutPutView
+    - 화면 출력에 대한 화면 담당
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
