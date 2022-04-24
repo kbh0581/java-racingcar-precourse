@@ -18,7 +18,8 @@ public class CarList {
     }
 
     private int getRandomCommand() {
-        return Randoms.pickNumberInRange(MoveStatus.COMMAND_RANGE_MIN, MoveStatus.COMMAND_RANGE_MAX);
+        return Randoms.pickNumberInRange(
+                MoveStatus.COMMAND_RANGE_MIN, MoveStatus.COMMAND_RANGE_MAX);
     }
 
     public void race() {

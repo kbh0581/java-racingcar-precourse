@@ -11,7 +11,7 @@ public class CarListTest {
 
     @Test
     @DisplayName("쉼표를 기준으로 자동차가 생성된다.")
-    void carSeprateCommaCreate() {
+    void carSeperateCommaCreate() {
         CarList carList = new CarList("CAR,NAME,PORT");
         assertThat(carList.getCars().get(0)).isEqualTo(new Car("CAR"));
         assertThat(carList.getCars().get(1)).isEqualTo(new Car("NAME"));

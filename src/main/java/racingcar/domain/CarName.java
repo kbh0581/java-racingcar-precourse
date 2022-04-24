@@ -7,8 +7,8 @@ public class CarName {
     private static final int MAX_NAME_LENGTH = 5;
 
     public CarName(String name) {
-        validNameLength(name);
-        this.name = name;
+        validNameLength(name.trim());
+        this.name = name.trim();
     }
 
     private void validNameLength(String name) {
