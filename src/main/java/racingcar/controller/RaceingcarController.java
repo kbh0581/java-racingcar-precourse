@@ -3,6 +3,7 @@ package racingcar.controller;
 import racingcar.domain.CarList;
 import racingcar.util.MessageUtils;
 import racingcar.view.InputView;
+import racingcar.view.OutPutView;
 
 public class RaceingcarController {
     private final InputView inputView;
@@ -27,6 +28,7 @@ public class RaceingcarController {
         int tryNumber = inputView.inputTry();
         for (int i = 0; i < tryNumber; i++) {
             carList.race();
+            OutPutView.carsStatusPrint(carList);
         }
     }
 }

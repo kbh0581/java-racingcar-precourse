@@ -28,7 +28,7 @@ public class CarList {
         }
     }
 
-    List<Car> getCars() {
+    public List<Car> getCars() {
         return carList;
     }
 }

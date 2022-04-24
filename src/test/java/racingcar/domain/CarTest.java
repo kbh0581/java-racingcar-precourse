@@ -23,7 +23,7 @@ public class CarTest {
         assertThat(MoveStatus.MOVE).isEqualTo(car.command(moveCommand));
         assertThat(MoveStatus.STOP).isEqualTo(car.command(stopCommand));
         assertThat(MoveStatus.MOVE).isEqualTo(car.command(moveCommand));
-        assertThat(car.getPosition()).isEqualTo(1);
+        assertThat(car.getPosition()).isEqualTo(new Position(2));
     }
 
     @Test
@@ -39,6 +39,16 @@ public class CarTest {
     void equalCar() {
         assertThat(new Car("자동차")).isEqualTo(new Car("자동차"));
         assertThat(new Car("자동차")).isNotEqualTo(new Car("자동차2"));
+    }
+
+    @Test
+    @DisplayName("자동차의 상태가 이름 : - 형태로 반환 된다")
+    void displayCar() {
+        Car car = new Car("자동차");
+        assertThat(car.toString()).isEqualTo("자동차:");
+        car.getPosition().add();
+        assertThat(car.toString()).isEqualTo("자동차:-");
+
     }
 
 }
