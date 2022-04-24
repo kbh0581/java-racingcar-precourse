@@ -4,8 +4,8 @@ public enum MoveStatus {
     MOVE, STOP;
 
     private static final int MOVE_COMMAND_RANGE = 4;
-    private static final int COMMAND_RANGE_MIN = 0;
-    private static final int COMMAND_RANGE_MAX = 9;
+    public static final int COMMAND_RANGE_MIN = 0;
+    public static final int COMMAND_RANGE_MAX = 9;
 
     public static MoveStatus getStatus(int command) {
         if (command < COMMAND_RANGE_MIN || command > COMMAND_RANGE_MAX) {
