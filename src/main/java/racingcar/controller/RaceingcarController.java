@@ -7,13 +7,22 @@ import racingcar.view.OutPutView;
 
 public class RaceingcarController {
     private final InputView inputView;
+    private final OutPutView outPutView;
 
-    public RaceingcarController(InputView inputView) {
+    public RaceingcarController(InputView inputView,
+                                OutPutView outPutView) {
         this.inputView = inputView;
+        this.outPutView = outPutView;
+    }
+
+    public void start() {
+        CarList carList = inputCarNames();
+        tryRace(carList);
+        outPutView.winnerPrint(carList);
     }
 
     /* 차의 이름들을 입력 받는 메서드 */
-    public CarList inputCarNames() {
+    private CarList inputCarNames() {
         CarList carList;
         try {
             carList = new CarList(inputView.inputCarName());
@@ -24,7 +33,8 @@ public class RaceingcarController {
         return carList;
     }
 
-    public void tryRace(CarList carList) {
+    /* 횟수 만큼 전진과 후진을 함*/
+    private void tryRace(CarList carList) {
         int tryNumber = inputView.inputTry();
         for (int i = 0; i < tryNumber; i++) {
             carList.race();

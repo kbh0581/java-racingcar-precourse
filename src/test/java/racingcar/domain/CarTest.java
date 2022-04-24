@@ -45,9 +45,23 @@ public class CarTest {
     @DisplayName("자동차의 상태가 이름 : - 형태로 반환 된다")
     void displayCar() {
         Car car = new Car("자동차");
-        assertThat(car.toString()).isEqualTo("자동차:");
+        assertThat(car.toString()).isEqualTo("자동차 : ");
         car.getPosition().add();
-        assertThat(car.toString()).isEqualTo("자동차:-");
+        assertThat(car.toString()).isEqualTo("자동차 : -");
+    }
+
+    @Test
+    @DisplayName("자동차의 이름을 반환")
+    void carName() {
+        assertThat(car.getName()).isEqualTo("움직이는차");
+    }
+
+    @Test
+    @DisplayName("자동차의 움직인 위치를 반환")
+    void getLength() {
+        assertThat(car.moveLength()).isEqualTo(0);
+        car.command(4);
+        assertThat(car.moveLength()).isEqualTo(1);
 
     }
 

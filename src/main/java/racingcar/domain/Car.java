@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Car {
     private final CarName carName;
     private final Position position = new Position(0);
-    private static final String SEPARATOR = ":";
+    private static final String SEPARATOR = " : ";
 
     public Car(String name) {
         carName = new CarName(name);
@@ -24,6 +24,10 @@ public class Car {
         return moveStatus;
     }
 
+    public String getName() {
+        return carName.getName();
+    }
+
     // 위치를 이동하는 메서드
     private void move() {
         position.add();
@@ -31,6 +35,10 @@ public class Car {
 
     public Position getPosition() {
         return position;
+    }
+
+    public int moveLength() {
+        return position.getPosition();
     }
 
     // 이름이 같으면 같은 차이다.
@@ -55,6 +63,5 @@ public class Car {
     public String toString() {
         return carName.getName() + SEPARATOR + position;
     }
-
 
 }

@@ -8,6 +8,8 @@ public class MessageUtils {
             ERROR_LABEL + " 입력값은 숫자여야만 합니다.";
     public static final String INPUT_TRY_RACE = "시도할 회수는 몇회인가요?";
 
+    public static final String OUT_LAST_WINNER = "최종 우승자:";
+
 
 
     public static String getErrorMessage(String exceptionMessage) {
