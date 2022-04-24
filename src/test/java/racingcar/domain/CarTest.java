@@ -16,15 +16,6 @@ public class CarTest {
     }
 
     @Test
-    @DisplayName("자동차의 이름은 5자 이하 이며 공백이 될 수 없다")
-    void validCarNameTest() {
-        new Car("3글자");
-        assertThatIllegalArgumentException().isThrownBy(()-> new Car("5글자넘는차"));
-        assertThatIllegalArgumentException().isThrownBy(()-> new Car(""));
-        assertThatIllegalArgumentException().isThrownBy(()-> new Car(null));
-    }
-
-    @Test
     @DisplayName("숫자의 값이 4이상일경우 전진 3이하일 경우 멈춘다")
     void moveStatus4OverRunElseStop() {
         int moveCommand = 4;

@@ -7,12 +7,12 @@ public class CarName {
     private static final int MAX_NAME_LENGTH = 5;
 
     public CarName(String name) {
-        validNameLength(name.trim());
+        validNameLength(name);
         this.name = name.trim();
     }
 
     private void validNameLength(String name) {
-        if (name == null || name.equals("")) {
+        if (name == null || name.trim().equals("")) {
             throw new IllegalArgumentException("차의 이름은 공백이 될 수 없습니다.");
         }
         if (name.length() > MAX_NAME_LENGTH) {
