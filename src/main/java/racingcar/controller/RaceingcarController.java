@@ -39,7 +39,7 @@ public class RaceingcarController {
         int tryNumber = inputView.inputTry();
         for (int i = 0; i < tryNumber; i++) {
             carList.race();
-            OutPutView.carsStatusPrint(carList);
+            outPutView.carsStatusPrint(carList);
         }
     }
 }
